@@ -20,20 +20,20 @@ export const ContactList = ({ contacts, deleteContact }) => {
   );
 };
 
-// ContactList.propTypes = {
-//   contacts: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       number: PropTypes.string.isRequired,
-//     }).isRequired
-//   ).isRequired,
-//   deleteContact: PropTypes.func.isRequired,
-// };
-
-export default ContactList;
-
 ContactList.propTypes = {
-  filterContact: PropTypes.func.isRequired,
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
   deleteContact: PropTypes.func.isRequired,
 };
+
+// export default ContactList;
+
+// ContactList.propTypes = {
+//   filterContact: PropTypes.func.isRequired,
+//   deleteContact: PropTypes.func.isRequired,
+// };
