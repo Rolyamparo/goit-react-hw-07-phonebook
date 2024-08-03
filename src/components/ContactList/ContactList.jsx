@@ -3,13 +3,16 @@ import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 import PropTypes from 'prop-types';
 import css from './ContactList.module.css';
 
+
 export const ContactList = ({ contacts, deleteContact }) => {
-  return (
+  //const filteredContacts = filterContact();
+    return (
     <ul className={css.ulBox}>
-      {contacts.map(contact => (
+      {contacts.map(filteredContact => (
         <ContactListItem
-          key={contact.id}
-          filteredContact={contact}
+                 
+          key={filteredContact.id}
+          filteredContact={filteredContact}
           deleteContact={deleteContact}
         />
       ))}
@@ -17,13 +20,20 @@ export const ContactList = ({ contacts, deleteContact }) => {
   );
 };
 
+// ContactList.propTypes = {
+//   contacts: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.string.isRequired,
+//       name: PropTypes.string.isRequired,
+//       number: PropTypes.string.isRequired,
+//     }).isRequired
+//   ).isRequired,
+//   deleteContact: PropTypes.func.isRequired,
+// };
+
+export default ContactList;
+
 ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    }).isRequired
-  ).isRequired,
+  filterContact: PropTypes.func.isRequired,
   deleteContact: PropTypes.func.isRequired,
 };
