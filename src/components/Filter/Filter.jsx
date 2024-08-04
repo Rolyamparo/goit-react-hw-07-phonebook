@@ -11,7 +11,7 @@ export const Filter = ({ filter, setFilter }) => {
         <div className={css.container}>
             <p>Find Contacts by Name</p>
             <input
-                type="tel"
+                type="text"
                 name="filter"
                 placeholder="Search by name"
                 value={filter}

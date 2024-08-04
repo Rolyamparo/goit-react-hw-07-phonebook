@@ -59,7 +59,7 @@ export const ContactForm = ({ addContact, contacts }) => {
                 <label className={css.formField}>
                     <p className={css.formLabel}>Name</p>
                     <input
-                        type="tel"
+                        type="text"
                         name="name"
                         // add \ before - in [' \-] to make it work (LMS)
                         pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -73,7 +73,7 @@ export const ContactForm = ({ addContact, contacts }) => {
                 <label className={css.formField}>
                     <p className={css.formLabel}>Number</p>
                     <input
-                        type="tel"
+                        type="text"
                         name="number"
                         // add \ before - in [\-.\s] to make it work (LMS)
                         pattern="\+?\d{1,4}?[\-.\s]?\(?\d{1,3}?\)?[\-.\s]?\d{1,4}[\-.\s]?\d{1,4}[\-.\s]?\d{1,9}"
